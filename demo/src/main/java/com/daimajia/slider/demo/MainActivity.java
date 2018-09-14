@@ -18,7 +18,6 @@ import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.Indicators.PagerIndicator;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
-import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 
 import java.util.HashMap;
@@ -46,13 +45,11 @@ public class MainActivity extends ActionBarActivity implements BaseSliderView.On
         file_maps.put("House of Cards",R.drawable.house);
         file_maps.put("Game of Thrones", R.drawable.game_of_thrones);
 
-        for(String name : file_maps.keySet()){
-            TextSliderView textSliderView = new TextSliderView(this);
+        for(String name : url_maps.keySet()){
+            MyTextSliderView textSliderView = new MyTextSliderView(this);
             // initialize a SliderLayout
             textSliderView
-                    .description(name)
-                    .image(file_maps.get(name))
-                    .setScaleType(BaseSliderView.ScaleType.Fit)
+                    .image(url_maps.get(name))
                     .setOnSliderClickListener(this);
 
             //add your extra information
