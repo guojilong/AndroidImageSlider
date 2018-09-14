@@ -18,6 +18,28 @@ You can easily load images from an internet URL, drawable, or file. And there ar
 
 #### Gradle
 
+#### after v1.1.5
+
+Add it in your root build.gradle at the end of repositories:
+
+```
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+Add the dependency
+
+```
+dependencies {
+	        implementation 'com.github.guojilong:AndroidImageSlider:v1.1.6'
+	}
+```
+#### before v1.1.5
+
 ```groovy
 dependencies {
     	compile "com.android.support:support-v4:+"
@@ -27,33 +49,6 @@ dependencies {
 }
 ```
 
-
-#### Maven
-
-```xml
-<dependency>
-    <groupId>com.squareup.picasso</groupId>
-    <artifactId>picasso</artifactId>
-    <version>2.3.2</version>
-</dependency>
-<dependency>
-    <groupId>com.nineoldandroids</groupId>
-    <artifactId>library</artifactId>
-    <version>2.4.0</version>
-</dependency>
-<dependency>
-    <groupId>com.daimajia.slider</groupId>
-    <artifactId>library</artifactId>
-    <version>1.1.2</version>
-    <type>apklib</type>
-</dependency>
-```
-
-#### Eclipse
-
-For Eclipse users, I provided a sample project which orgnized as Eclipse way. You can download it from [here](https://github.com/daimajia/AndroidImageSlider/releases/download/v1.0.9/AndroidImageSlider-Eclipse.zip), and make some changes to fit your project.
-
-Notice: It's the version of 1.0.9, it may not update any more. You can update manually by yourself.
 
 ### Step 2
 
